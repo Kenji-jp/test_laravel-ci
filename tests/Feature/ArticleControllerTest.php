@@ -9,18 +9,6 @@ use Tests\TestCase;
 
 class ArticleControllerTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $response = $this->get('/');
-
-        $response->assertStatus(200);
-    }
-
     use RefreshDatabase;
     
     public function testIndex()
@@ -36,7 +24,5 @@ class ArticleControllerTest extends TestCase
         $response = $this->get(route('articles.create'));
 
         $response->assertRedirect(route('login'));
-    }   
-    
-    
+    }    
 }
